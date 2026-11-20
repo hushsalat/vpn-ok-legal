@@ -76,6 +76,34 @@ formule sans réseau ;</li>
 <p>Désinstaller l'application efface tout cela. L'historique de sessions peut
 aussi être effacé à tout moment depuis l'écran Statistiques.</p>
 
+<h3>L'autorisation de localisation, et pourquoi elle est demandée</h3>
+
+<p>Sur Android, l'application peut vous demander l'autorisation de
+<strong>localisation précise</strong>. Cela mérite une explication, car
+l'intitulé que le système affiche est trompeur dans notre cas.</p>
+
+<p>Cette autorisation sert uniquement à la fonction <strong>réseaux de
+confiance</strong>, qui vous permet de ne pas ouvrir le tunnel sur un Wi-Fi
+que vous avez désigné comme sûr — celui de votre domicile, par exemple. Pour
+savoir sur quel réseau vous êtes, l'application doit lire son nom (le SSID),
+et <strong>depuis Android 10 le système place cette lecture derrière
+l'autorisation de localisation</strong>. C'est une contrainte du système
+d'exploitation, pas un choix de notre part.</p>
+
+<p>En conséquence :</p>
+
+<ul>
+<li><strong>nous ne lisons jamais vos coordonnées géographiques</strong> —
+ni latitude, ni longitude, ni adresse ;</li>
+<li>le nom du réseau est comparé à votre liste sur votre appareil, et
+<strong>ne nous est jamais transmis</strong> ;</li>
+<li>rien de tout cela n'est conservé sur nos serveurs, puisque rien n'en
+sort ;</li>
+<li><strong>vous pouvez refuser</strong> : l'application fonctionne
+normalement, et tous les réseaux sont alors traités comme non approuvés,
+donc le tunnel s'ouvre partout.</li>
+</ul>
+
 <h2>4. Ce que nos serveurs traitent</h2>
 
 <table>
